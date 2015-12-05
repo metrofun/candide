@@ -81,7 +81,7 @@ CDWindow::CDWindow(int w, int h, const char* label/*, CDFaceData* faceData*/ )
 	faceWindowFront = new CDFaceWindow(10,menuHeight+10,faceWindowWidth,h-menuHeight-20/*, faceData*/);
 	faceWindowSide = new CDFaceWindow(10+faceWindowWidth+faceWindowGap,menuHeight+10,faceWindowWidth,h-menuHeight-20/*, faceData*/);
 	// make a 90 degree rotation about the y axis
-	mat4 sideTransform = rotate(mat4(), 90.0f, vec3(0,1,0));
+	mat4 sideTransform = rotate(mat4(), 0.5f, vec3(0,1,0));
 	faceWindowSide->setModelTransform( sideTransform );
 
 	// catch 3d model signals

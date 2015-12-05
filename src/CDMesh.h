@@ -26,11 +26,11 @@ public:
 
 class CDMesh
 {
-	friend class CDFaceDistortionUnit;
+    friend class CDFaceDistortionUnit;
 	
 public:
-	CDMesh() {};
-	virtual ~CDMesh() {};
+    CDMesh() {};
+    virtual ~CDMesh() {};
 	
 	void clear() { vertices.clear(); triangles.clear(); }
 	
@@ -70,8 +70,8 @@ public:
 	
 protected:
 	
-	virtual void setupArrays() const;
-	virtual void teardownArrays() const;
+    virtual void setupArrays() const;
+    virtual void teardownArrays() const;
 	
 private:
 	

@@ -189,7 +189,7 @@ int CDFaceWindow::handle(int code)
 				float currentScreenCenterDistance = glm::length(dragCurr-screenCenter);
 				if ( currentScreenCenterDistance>0 && currentScreenCenterDistance>0 ) {
 					float scale = currentScreenCenterDistance/prevScreenCenterDistance;
-					mat4 scaleMat = glm::scale(scale,scale,scale);
+					mat4 scaleMat = glm::scale(vec3(scale,scale,scale));
 					//backgroundMeshTransform = scaleMat*backgroundMeshTransform;
 					//backgroundMeshTransformUpdatedSignal.emit( this, backgroundMeshTransform );
 					backgroundMeshTransformUpdatedSignal.emit("scale",scaleMat);
@@ -265,7 +265,7 @@ int CDFaceWindow::handle(int code)
 
 glm::mat4 CDFaceWindow::getBackgroundImageTransform()
 {
-	mat4 t = glm::translate(bgImageTranslate) * glm::scale(bgImageScale, bgImageScale, bgImageScale);
+	mat4 t = glm::translate(bgImageTranslate) * glm::scale(vec3(bgImageScale, bgImageScale, bgImageScale));
 	return t;
 }
 

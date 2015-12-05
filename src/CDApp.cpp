@@ -45,7 +45,7 @@ CDApp::CDApp( int argc, const char* argv[] )
 : faceData( CANDIDE_FILE_PATH )
 {
 	instance = this;
-	
+    
 	scene.connectToFaceData(faceData);
 	
 #ifdef TEST_CDMEANVALUEMESHDEFORMER
@@ -65,7 +65,7 @@ CDApp::CDApp( int argc, const char* argv[] )
 }
 
 
-void runMeanValueMeshDeformerTest()
+void runMeanValueMeshDefor2merTest()
 {
 	
 	
