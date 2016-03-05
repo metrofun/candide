@@ -50,10 +50,10 @@ public:
     std::vector<std::string> getAnimationUnitNames();
     std::vector<std::string> getShapeUnitNames();
 
-    float getAnimationUnitValue(const std::string& auName);
+    float getAnimationUnitValue(const std::string& auName) const;
     void setAnimationUnitValue(const std::string& auName, float value);
 
-    float getShapeUnitValue(const std::string& suName);
+    float getShapeUnitValue(const std::string& suName) const;
     void setShapeUnitValue(const std::string& suName, float value);
 
     void deserialize(const picojson::value& source);
@@ -72,8 +72,8 @@ private:
     void load(const std::string& path);
 
     /// returns npos if not found
-    size_t getIndexOfShapeUnit(const std::string& name);
-    size_t getIndexOfAnimationUnit(const std::string& name);
+    size_t getIndexOfShapeUnit(const std::string& name) const;
+    size_t getIndexOfAnimationUnit(const std::string& name) const;
 
     // data
     CDMesh meshAtRest;
